@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "692708551370",
+    "project_id": "maplive-8e410",
+    "storage_bucket": "maplive-8e410.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692708551370:android:9e5400467d8cf5779e2233",
+        "android_client_info": {
+          "package_name": "com.aaddev.my_loc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692708551370-d70ea502bkdbnv8tjsjrpl7nb5go2ii0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aaddev.my_loc",
+            "certificate_hash": "adfd903bd415b94b107edd70db4942d5c0408e78"
+          }
+        },
+        {
+          "client_id": "692708551370-6g7k4l8coujb4ajlfm0ov7f32jok18r3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBagqn1kyZpLWxZdlZjwpOW1N9o0QlaZRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692708551370-6g7k4l8coujb4ajlfm0ov7f32jok18r3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
