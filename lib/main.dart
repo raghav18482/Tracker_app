@@ -91,6 +91,15 @@ class _MyAppState extends State<MyApp> {
                     child: Text('stop live location')),
               ],
             ),
+            SizedBox(
+              height: 8,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  String textFieldValue = _controller.text;
+                  _storelocation(textFieldValue);
+                },
+                child: Text('Store location')),
             Expanded(
                 child: StreamBuilder(
               stream:
@@ -138,6 +147,23 @@ class _MyAppState extends State<MyApp> {
     try {
       final loc.LocationData _locationResult = await location.getLocation();
       await FirebaseFirestore.instance.collection('location').doc('$name').set({
+        'latitude': _locationResult.latitude,
+        'longitude': _locationResult.longitude,
+        'name': name
+      }, SetOptions(merge: true));
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  _storelocation(String name) async {
+    var time = DateTime.now();
+    try {
+      final loc.LocationData _locationResult = await location.getLocation();
+      await FirebaseFirestore.instance
+          .collection('saved_location')
+          .doc('$time')
+          .set({
         'latitude': _locationResult.latitude,
         'longitude': _locationResult.longitude,
         'name': name
